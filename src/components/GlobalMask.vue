@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      isShow: true,
+      isShow: false,
       popupStyle:{
           background:'#fff'
       }
