@@ -1,13 +1,17 @@
 <template>
   <div id="app">
     <router-view v-wechat-title="$route.meta.title"></router-view>
+    <GlobalMask></GlobalMask>
   </div>
 </template>
 
 <script>
+import GlobalMask from "@/components/GlobalMask"
 export default {
   name: "app",
-  components: {}
+  components: {
+    GlobalMask
+  }
 };
 </script>
 

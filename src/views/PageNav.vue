@@ -30,6 +30,10 @@ export default {
     };
   },
 
+  mounted:{
+    
+  },
+
   methods: {
     goPage(path) {
       window.location.href = `${window.location.protocol}//${window.location.host}${path}`;
