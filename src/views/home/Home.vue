@@ -1,12 +1,17 @@
 <template>
   <article>
     首页
+    <button @click="del">删除</button>
+    <Dialog ref="dialog"></Dialog>
   </article>
 </template>
 <script>
-
+import Dialog from '@/components/Dialog.vue'
 export default {
   name: "home",
+  components:{
+    Dialog
+  },
   data() {
     return {
       
@@ -14,12 +19,14 @@ export default {
   },
 
   mounted(){
-    window.setTimeout(()=>{
-      this.$store.commit("isShow",false)
-    },2000)
-    window.console.log(this.$store.state.mask)
-    window.console.log(this.$store.state.test)
+    
   },
+
+  methods:{
+    del(){
+      this.$refs.dialog.trigger()
+    }
+  }
 
 };
 </script>
