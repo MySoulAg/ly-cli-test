@@ -1,7 +1,7 @@
 <template>
   <article>
-    <van-popup :overlay-style='popupStyle' v-model="isShow">
-        <img class="loading" src="@/assets/imgs/loading.gif" alt="" srcset="">
+    <van-popup :overlay-style='popupStyle' v-model="$store.state.mask.isShow">
+        <img class="loading" src="@/assets/imgs/loading1.gif" alt="" srcset="">
     </van-popup>
   </article>
 </template>
@@ -14,12 +14,15 @@ export default {
   },
   data() {
     return {
-      isShow: false,
       popupStyle:{
           background:'#fff'
       }
     };
-  }
+  },
+
+
+
+  
 };
 </script>
 <style lang="scss" scoped>
