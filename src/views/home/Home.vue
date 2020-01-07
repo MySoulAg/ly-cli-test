@@ -3,6 +3,9 @@
     首页
     <button @click="del">删除</button>
     <Dialog ref="dialog"></Dialog>
+    <div class="box" :style="'border-image: url('+borderImg+') 30 27 stretch'">
+
+    </div>
   </article>
 </template>
 <script>
@@ -13,7 +16,9 @@ export default {
     Dialog
   },
   data() {
-    return {}
+    return {
+      borderImg:require("@/assets/imgs/border-img.png")
+    }
   },
 
   mounted() {},
@@ -25,4 +30,12 @@ export default {
   }
 }
 </script>
-<style scoped></style>
+<style scoped>
+.box {
+  width: 345px;
+  height: 200px;
+  margin: 100px auto 0;
+  background: #eeeeee;
+  border: 35px solid transparent;
+}
+</style>
