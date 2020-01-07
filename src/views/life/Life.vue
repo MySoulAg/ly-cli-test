@@ -1,11 +1,9 @@
 <template>
-    <article>生活</article>
+  <article>生活</article>
 </template>
 <script>
 export default {
-    name:"life"
+  name: 'life'
 }
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

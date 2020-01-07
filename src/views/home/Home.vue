@@ -8,26 +8,21 @@
 <script>
 import Dialog from '@/components/Dialog.vue'
 export default {
-  name: "home",
-  components:{
+  name: 'home',
+  components: {
     Dialog
   },
   data() {
-    return {
-      
-    };
+    return {}
   },
 
-  mounted(){
-    
-  },
+  mounted() {},
 
-  methods:{
-    del(){
+  methods: {
+    del() {
       this.$refs.dialog.trigger()
     }
   }
-
-};
+}
 </script>
 <style scoped></style>

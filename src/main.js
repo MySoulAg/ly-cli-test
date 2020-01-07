@@ -6,13 +6,13 @@ import VueWechatTitle from 'vue-wechat-title' //设置页面标题
 
 Vue.use(VueWechatTitle)
 
-router.beforeEach((to,from,next)=>{
-  store.commit("isShow",true)
-  window.setTimeout(()=>{
-    store.commit("isShow",false)
+router.beforeEach((to, from, next) => {
+  store.commit("isShow", true)
+  window.setTimeout(() => {
+    store.commit("isShow", false)
     next()
-  },2000)
- 
+  }, 2000)
+
 })
 
 Vue.config.productionTip = false

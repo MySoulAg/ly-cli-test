@@ -6,19 +6,19 @@
 </template>
 
 <script>
-import GlobalMask from "@/components/GlobalMask"
+import GlobalMask from '@/components/GlobalMask'
 export default {
-  name: "app",
+  name: 'app',
   components: {
     GlobalMask
   }
-};
+}
 </script>
 
-<style lang='scss'>
-@import "@/assets/css/common.scss"; 
+<style lang="scss">
+@import '@/assets/css/common.scss';
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
