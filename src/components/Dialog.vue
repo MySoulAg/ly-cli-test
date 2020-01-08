@@ -5,6 +5,11 @@
 import { Dialog } from "vant";
 export default {
   name: "child",
+  data(){
+    return {
+      gegrhbre:"测试数据"
+    }
+  },
   methods: {
     trigger() {
       Dialog.confirm({
