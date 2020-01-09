@@ -4,18 +4,18 @@
     <button @click="del">删除</button>
     <button @click="add">+1</button>
     <p>父组件的数据：{{ num }}</p>
-    <Dialog ref="dialog"></Dialog>
-    <Child :num="num"></Child>
+    <Dialog class="fegrgreg" ref="dialog"></Dialog>
+    <!-- <Child :num="num"></Child> -->
   </article>
 </template>
 <script>
 import Dialog from '@/components/Dialog.vue'
-import Child from '@/components/Child.vue'
+// import Child from '@/components/Child.vue'
 export default {
   name: 'home',
   components: {
-    Dialog,
-    Child
+    Dialog
+    // Child
   },
   data() {
     return {
@@ -23,15 +23,21 @@ export default {
     }
   },
 
-
   methods: {
     del() {
-      this.$refs.dialog.trigger()
+      this.$refs.dialog.show()
     },
     add() {
       this.num++
-    }
+    },
+    notShow() {}
   }
 }
 </script>
-<style scoped></style>
+<style lang="less" scoped>
+article {
+  
+    
+  
+}
+</style>
