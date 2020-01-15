@@ -3,7 +3,7 @@
     <section class="tab-box">
       <ul class="tab">
         <li
-          @click="changeTab(index, $event)"
+          @click="changeTab(index)"
           :class="active == index ? 'active' : ''"
           v-for="(item, index) in tabList"
           :key="index"
@@ -14,17 +14,18 @@
     </section>
 
     <section class="content-box">
-      <ul class="content" ref="ul">
-        <li
-          :style="{ display: active == index ? 'block' : 'none' }"
-          ref="item"
-          class="item"
-          v-for="(item, index) in tabList"
-          :key="index"
-        >
-          {{ item.content }}
-        </li>
-      </ul>
+      <div class="box">
+      <transition name="slide-fade1">
+        <div v-show="show" class="content">
+          {{ tabList[active].content }}
+        </div>
+      </transition>
+      <transition name="slide-fade1">
+        <div v-show="!show" class="content">
+          {{ tabList[active].content }}
+        </div>
+      </transition>
+      </div>
     </section>
   </article>
 </template>
@@ -33,6 +34,7 @@ export default {
   name: 'tab',
   data() {
     return {
+      show: true,
       active: 0, //默认tab选中项
       tabList: [
         {
@@ -78,10 +80,7 @@ export default {
   methods: {
     changeTab(index) {
       this.active = index
-      console.log(this.$refs['item'])
-      console.log(this.$refs.ul)
-      // console.log(ev.currentTarget.parentElement.getBoundingClientRect())
-      // console.log(ev.target.getBoundingClientRect())
+      this.show = !this.show
     }
   }
 }
@@ -118,12 +117,53 @@ export default {
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
+  position: relative;
+
+  .box {
+    width: 100%;
+    // height: 100px;
+    position: relative;
+    // overflow: hidden;
+  }
 
   .content {
-    
-    li {
-      transition: all 1s;
-    }
+    width: 100%;
+    // width: calc(100%-30px);
+    // height: 300px;
+    background: #eee;
+
+    position: absolute;
   }
+}
+.slide-fade-enter-active {
+  transition: all 0.8s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s ease;
+}
+.slide-fade-enter
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(100px);
+  opacity: 0;
+}
+.slide-fade-leave-to {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.slide-fade1-enter-active {
+  transition: all 0.8s ease;
+}
+.slide-fade1-leave-active {
+  transition: all 0.8s ease;
+}
+.slide-fade1-enter
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.slide-fade1-leave-to {
+  transform: translateX(100px);
+  opacity: 0;
 }
 </style>
