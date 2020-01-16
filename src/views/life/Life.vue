@@ -22,7 +22,8 @@ export default {
   methods: {}
 }
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
+@import '@/assets/css/animation.scss';
 .img {
   width: 70px;
   height: 70px;
@@ -37,42 +38,5 @@ export default {
   animation-iteration-count: infinite;
 }
 
-@keyframes jello {
-  11.1% {
-    transform: scale(1, 1);
-  }
-
-  22.2% {
-    transform: scale(1.04, 1.04);
-  }
-
-  33.3% {
-    transform: scale(1.08, 1.08);
-  }
-
-  44.4% {
-    transform: scale(1.10, 1.10);
-  }
-
-  55.5% {
-    transform: scale(1.10, 1.10);
-  }
-
-  66.6% {
-    transform: scale(1.10, 1.10);
-  }
-
-  77.7% {
-    transform: scale(1.08, 1.08);
-  }
-
-  88.8% {
-    transform: scale(1.04, 1.04);
-  }
-
-  88.8% {
-    transform: scale(1, 1);
-  }
-}
 </style>
 1
