@@ -136,10 +136,10 @@ export default {
   }
 }
 .slide-fade-enter-active {
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-enter
 /* .slide-fade-leave-active for below version 2.1.8 */ {
@@ -152,10 +152,10 @@ export default {
 }
 
 .slide-fade1-enter-active {
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade1-leave-active {
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade1-enter
 /* .slide-fade-leave-active for below version 2.1.8 */ {
