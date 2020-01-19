@@ -12,14 +12,19 @@
       />
       <span>{{info}}</span>
     </div>
+    <div class="button-box">
+      <Button type="fill1">测试按钮</Button>
+    </div>
   </article>
 </template>
 <script>
 import Tab from '@/components/Tab.vue'
+import Button from '@/components/Button.vue'
 export default {
   name: 'life',
   components: {
-    'my-tab': Tab
+    'my-tab': Tab,
+    Button
   },
   data() {
     return {
@@ -71,4 +76,10 @@ export default {
     margin-top: 2px;
   }
 }
+
+.button-box {
+  padding: 20px;
+}
+
+
 </style>
