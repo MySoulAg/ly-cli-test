@@ -13,7 +13,7 @@
       <span>{{info}}</span>
     </div>
     <div class="button-box">
-      <Button type="fill1">测试按钮</Button>
+      <Button type="line6">测试按钮</Button>
     </div>
   </article>
 </template>

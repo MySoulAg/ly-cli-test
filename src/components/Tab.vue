@@ -1,30 +1,24 @@
 <template>
   <article>
     <section class="tab-box">
-      <ul class="tab">
+      <ul class="tab" ref="tab">
         <li
           @click="changeTab(index)"
           :class="active == index ? 'active' : ''"
           v-for="(item, index) in tabList"
           :key="index"
-        >
-          {{ item.tab }}
-        </li>
+        >{{ item.tab }}</li>
       </ul>
     </section>
 
     <section class="content-box">
       <div class="box">
-      <transition name="slide-fade1">
-        <div v-show="show" class="content">
-          {{ tabList[active].content }}
-        </div>
-      </transition>
-      <transition name="slide-fade1">
-        <div v-show="!show" class="content">
-          {{ tabList[active].content }}
-        </div>
-      </transition>
+        <transition name="slide-fade1">
+          <div v-show="show" class="content">{{ tabList[active].content }}</div>
+        </transition>
+        <transition name="slide-fade1">
+          <div v-show="!show" class="content">{{ tabList[active].content }}</div>
+        </transition>
       </div>
     </section>
   </article>
@@ -75,6 +69,10 @@ export default {
         }
       ]
     }
+  },
+
+  mounted() {
+    console.log()
   },
 
   methods: {
@@ -141,8 +139,7 @@ export default {
 .slide-fade-leave-active {
   transition: all 0.3s ease;
 }
-.slide-fade-enter
-/* .slide-fade-leave-active for below version 2.1.8 */ {
+.slide-fade-enter {
   transform: translateX(100px);
   opacity: 0;
 }
