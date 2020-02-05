@@ -1,7 +1,28 @@
-// 格式化的工具类方法
+/**
+ * 格式化的工具类方法
+ */
 
 export default {
-    /**
+  /**
+   * 判断对象是否为空
+   * @param data
+   * @returns {boolean}
+   */
+  isEmpty(data) {
+    if (typeof data == "undefined" || null == data || "" === data) {
+      return true;
+    } else if (this.isArray(data)) {
+      return data.length == 0;
+    } else if (this.isJSON(data)) {
+      for (var a in data) {
+        return false;
+      }
+      return true;
+    }
+    return false;
+  },
+
+  /**
    * 去除空格
    */
   removeSpaces(str) {

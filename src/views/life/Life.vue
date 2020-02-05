@@ -34,6 +34,8 @@ export default {
     }
   },
 
+  
+
   methods: {
     inputMsg() {
       window.clearTimeout(window.timeOut)
