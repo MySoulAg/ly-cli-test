@@ -23,6 +23,10 @@ export default {
         {
           title: '侧边栏锚点，滚动条平滑滚动',
           path: '/aside-nav'
+        },
+        {
+          title: '新闻',
+          path: '/news'
         }
       ]
     }
