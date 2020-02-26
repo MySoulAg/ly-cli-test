@@ -5,12 +5,12 @@
     <div class="input">
       <input
         type="text"
-        v-model="msg"
+        v-model="inputValue"
         @keydown.delete="deletDown"
         @keyup.delete="deletUp"
-        @input="inputMsg"
+        @input="handleInput"
       />
-      <span>{{info}}</span>
+      <span>{{message}}</span>
     </div>
     <div class="button-box">
       <Button type="line6">测试按钮</Button>
@@ -28,8 +28,8 @@ export default {
   },
   data() {
     return {
-      msg: '',
-      info: '',
+      inputValue: '',
+      message: '',
       isDeletUp: true
     }
   },
@@ -37,17 +37,17 @@ export default {
   
 
   methods: {
-    inputMsg() {
+    handleInput() {
       window.clearTimeout(window.timeOut)
       window.timeOut = window.setTimeout(() => {
-        if (this.msg != '' && this.isDeletUp) {
-          this.info = '正在校验姓名....'
+        if (this.inputValue != '' && this.isDeletUp) {
+          this.message = '正在校验姓名....'
           window.timeOut1 = window.setTimeout(() => {
-            this.checkName(this.msg)
+            this.checkName(this.inputValue)
             window.clearTimeout(window.timeOut1)
           }, 1000)
         } else {
-          this.info = ''
+          this.message = ''
         }
       }, 500)
     },
@@ -62,9 +62,9 @@ export default {
 
     checkName(name) {
       if (name == 'admin') {
-        this.info = '该用户名已经被注册！'
+        this.message = '该用户名已经被注册！'
       } else {
-        this.info = '该用户名可用'
+        this.message = '该用户名可用'
       }
     }
   }
