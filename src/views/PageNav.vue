@@ -27,6 +27,10 @@ export default {
         {
           title: '新闻',
           path: '/news'
+        },
+        {
+          title: '拖拽',
+          path: '/draggable'
         }
       ]
     }
@@ -34,7 +38,7 @@ export default {
 
   methods: {
     goPage(path) {
-      window.location.href = `${window.location.protocol}//${window.location.host}${path}`
+      this.$router.push(path)
     }
   }
 }

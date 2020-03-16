@@ -5,6 +5,9 @@ import store from './store/index.js'
 import VueLazyload from 'vue-lazyload'  //图片懒加载
 import VueWechatTitle from 'vue-wechat-title' //设置页面标题
 
+import "bootstrap/dist/css/bootstrap.css";
+// import "font-awesome/less/font-awesome.less";
+
 Vue.use(VueWechatTitle)
 
 Vue.use(VueLazyload,{
@@ -12,14 +15,14 @@ Vue.use(VueLazyload,{
   loading:require('./assets/imgs/loading.gif')
 })
 
-router.beforeEach((to, from, next) => {
-  store.commit("isShow", true)
-  window.setTimeout(() => {
-    store.commit("isShow", false)
-    next()
-  }, 2000)
+// router.beforeEach((to, from, next) => {
+//   store.commit("isShow", true)
+//   window.setTimeout(() => {
+//     store.commit("isShow", false)
+//     next()
+//   }, 2000)
 
-})
+// })
 
 Vue.config.productionTip = false
 

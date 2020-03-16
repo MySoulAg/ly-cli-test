@@ -8,15 +8,25 @@ import Life from './life/life.js'//生活
 import AsideNav from './asideNav/asideNav.js'//侧边栏锚点，滚动条平滑滚动
 import News from './news/news.js'//新闻
 
+const Draggable = () => import('@/views/draggable/Draggable.vue')//新闻
+
 
 const routerList = [
     ...PageNav,
     ...Home,
     ...Life, 
     ...AsideNav,
-    ...News
+    ...News,
+    {
+        path: '/draggable',
+        name: 'Draggable',
+        component: Draggable,
+        meta:{
+            title:"拖拽"
+        }
+    }
 ]
 export default new Router({
-    mode: 'history',
+    // mode: 'history',
     routes: routerList
 })
