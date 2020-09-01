@@ -53,6 +53,7 @@ article {
   ul {
     li {
       padding: 3px 10px;
+      border: 1px solid #eee;
     }
 
     li:hover {
