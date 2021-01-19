@@ -1,21 +1,22 @@
 <template>
   <div id="app">
     <keep-alive>
-    <router-view v-wechat-title="$route.meta.title"></router-view>
+      <router-view v-wechat-title="$route.meta.title"></router-view>
     </keep-alive>
     <GlobalMask></GlobalMask>
   </div>
 </template>
 
 <script>
+// 测试代码提交的修改
 import GlobalMask from '@/components/GlobalMask'
 export default {
   name: 'app',
   components: {
     GlobalMask
   },
-  methods:{
-    dfreg(){
+  methods: {
+    dfreg () {
       console.log('App')
     }
   }
