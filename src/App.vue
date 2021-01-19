@@ -8,7 +8,7 @@
 </template>
 
 <script>
-// 测试代码提交的修改1
+// 测试代码提交的修改test_dev
 import GlobalMask from '@/components/GlobalMask'
 export default {
   name: 'app',
